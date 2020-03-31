@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #eaeaea
+}
+
+header > img {
+	height:170px;
+	width: auto;
+	display: block;
+	margin: 50px auto;
+}
+
+.score-board{
+	margin: 120px auto;
+	height:300px;
+	width: 800px;
+	border-radius: 50px;
+	background: #eaeaea;
+	box-shadow: 11px 11px 22px #d3d3d3, -11px -11px 22px #ffffff;
+	font-size: 170px;
+	font-family:'Bebas Neue', cursive;
+	text-align: center;
+	color: #999999;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.score-board:after{
+	content: "";
+	position: absolute;
+	height:83%;
+	width:92%;
+	border-radius: 30px;
+	background-color: #eaeaea;
+	box-shadow: inset 11px 11px 22px #d3d3d3, inset -11px -11px 22px #ffffff;
+	z-index: -1
+}
+
+#userdp > img{
+	height: 245;
+	width: auto;
+	position: absolute;
+	top:150px;
+	left:-170px;
+}
+
+#comdp > img{
+	height: 245px;
+	width: auto;
+	position: absolute;
+	top:150px;
+	right:-170px;
+}
+
+#instruction{
+	font-size: 100px;
+	font-family:'Bebas Neue', cursive;
+	text-align: center;
+	color: #999999;
+	margin-top: 150px;
+}
+.user-choices {
+	text-align: center;
+	margin: -20px auto;
+
+}
+
+div > .choice {
+	display: inline-block;
+	height: 600px;
+	width: 600px;
+	border-radius: 50%;
+	background: #eaeaea;
+	box-shadow:  13px 13px 26px #c7c7c7, -13px -13px 26px #ffffff;
+	position:relative;
+	align-items: center;
+	justify-content: center;
+	top: 10px;
+	margin:50px;
+}
+
+.choice > img{
+	width: 500px;
+	height: 500px;
+	position:absolute;
+	right:47px;
+	top:55px;
+}
+
+.choice:hover{
+	cursor:pointer;
+background: #eaeaea;
+box-shadow: inset 13px 13px 26px #b4b4b4,
+            inset -13px -13px 26px #ffffff;}
+
+.result {
+	font-size: 160px;
+	font-weight: bold;
+	font-family:'Bebas Neue', cursive;
+	text-align: center;
+	color: #999999;
+	margin:100px auto;
+}
