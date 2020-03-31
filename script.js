@@ -39,18 +39,19 @@ var clickOnScissors = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "scissorspaper":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "scissorsstone":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "scissorsscissors":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
-    //Bring back the buttons
-    setTimeout(bringBackMyButton(),1300);
     };
 
 };
@@ -58,6 +59,8 @@ scissorsButton.addEventListener("click",clickOnScissors);
 
 var clickOnPaper = function (event) {
     console.log("you clicked paper")
+    //after user click on paper --> buttons disappear
+    hideButton();
     //after user click on paper --> com choose randomly --> compare
     console.log ("computer chose " + comChooseRandom());
     var comHasChosen = comChooseRandom();
@@ -67,15 +70,18 @@ var clickOnPaper = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "paperstone":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1000);;
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "paperscissors":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "paperpaper":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
     };
 };
@@ -84,6 +90,8 @@ paperButton.addEventListener("click",clickOnPaper);
 
 var clickOnStone = function (event) {
     console.log("you clicked stone")
+    //after user click on stone --> buttons disappear
+    hideButton();
     //after user click on rock --> com choose randomly --> compare
     console.log ("computer chose " + comChooseRandom());
     var comHasChosen = comChooseRandom();
@@ -93,15 +101,18 @@ var clickOnStone = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "stonescissors":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1000);;
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "stonepaper":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
         case "stonestone":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1000);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
         break;
     };
 };
@@ -116,17 +127,16 @@ function comChooseRandom(){
 console.log ("computer chose " + comChooseRandom());
 
 //to hide button after user click on button
+
 function hideButton()
 {
-    document.getElementById('to-hide').style.display = "none";
+    document.getElementById('to-hide').style.opacity = 0;
 }
 
-//bring back the buttons
+// to bring back the buttons
 function bringBackMyButton(){
-    document.getElementById('to-hide').style.display = "inline-block";
+    document.getElementById('to-hide').style.opacity = 100;
 }
-
-
 
 
 // user win --> update score --> change result msg on browser
