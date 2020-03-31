@@ -50,7 +50,7 @@ var clickOnScissors = function (event) {
         setTimeout(()=>{draw(userHasChosen,comHasChosen)},1000);
         break;
     //Bring back the buttons
-    bringBackMyButton()
+    setTimeout(bringBackMyButton(),1300);
     };
 
 };
