@@ -30,6 +30,7 @@ var clickOnScissors = function (event) {
     console.log("you clicked scissors")
     //after user click on scissors --> buttons disappear
     hideButton();
+    document.querySelector('.animation').style.visibility = "visible";
     //after user click on scissors --> com choose randomly --> compare
     console.log ("computer chose " + comChooseRandom());
     var comHasChosen = comChooseRandom();
@@ -39,18 +40,21 @@ var clickOnScissors = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "scissorspaper":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "scissorsstone":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "scissorsscissors":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
     };
 
@@ -61,6 +65,7 @@ var clickOnPaper = function (event) {
     console.log("you clicked paper")
     //after user click on paper --> buttons disappear
     hideButton();
+    document.querySelector('.animation').style.visibility = "visible";
     //after user click on paper --> com choose randomly --> compare
     console.log ("computer chose " + comChooseRandom());
     var comHasChosen = comChooseRandom();
@@ -70,18 +75,21 @@ var clickOnPaper = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "paperstone":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "paperscissors":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "paperpaper":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
     };
 };
@@ -92,6 +100,7 @@ var clickOnStone = function (event) {
     console.log("you clicked stone")
     //after user click on stone --> buttons disappear
     hideButton();
+    document.querySelector('.animation').style.visibility = "visible";
     //after user click on rock --> com choose randomly --> compare
     console.log ("computer chose " + comChooseRandom());
     var comHasChosen = comChooseRandom();
@@ -101,18 +110,21 @@ var clickOnStone = function (event) {
     switch (userHasChosen + comHasChosen) {
         case "stonescissors":
         console.log("YOU WIN!");
-        setTimeout(()=>{win(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{win(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "stonepaper":
         console.log("YOU LOSE!");
-        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{lose(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
         case "stonestone":
         console.log("Its a draw");
-        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1300);
-        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1300);
+        setTimeout(()=>{draw(userHasChosen,comHasChosen)},1600);
+        setTimeout(()=>{document.getElementById('to-hide').style.opacity = 100},1600);
+        setTimeout(()=>{document.querySelector('.animation').style.visibility = "hidden"},1600);
         break;
     };
 };
